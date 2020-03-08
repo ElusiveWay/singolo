@@ -122,11 +122,13 @@ section{
     color: #f0d8d9;
     background-color: #d6564f;
 }
+textarea.form-area::placeholder{
+    line-height: 22px;
+}
 .form-area:not([type="submit"])::placeholder{
     position: relative;
     top:-1px;
     left:-1px;
-    line-height: 22px;
     color: #f48c8f;
     font-family: "Lato";
     font-size: 12px;
