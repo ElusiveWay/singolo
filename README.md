@@ -1,1 +1,1 @@
-# [Singolo](https://elusiveway.github.io/singolo/singolo.html)
+# [Singolo](https://elusiveway.github.io/singolo/)
