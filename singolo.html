@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="singolo.css">
+    <script src="script.js"></script>
     <title>singolo</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         <h1 class="header__logo">Singolo</h1>
         <nav class="header__menu">
             <ul>
-                <li>home</li>
+                <li class='active'>home</li>
                 <li>services</li>
                 <li>portfolio</li>
                 <li>about</li>
@@ -23,20 +24,29 @@
     </header>
     <main class="main">
         <section class="slider">
-            <button href="#" class="slider__left-button"></button>
+            <button onclick="singolo.click.next()" class="slider__left-button"></button>
+            <button onclick="singolo.click.prev()" class="slider__right-button"></button>
             <div class="slider__elem slider__elem_phones">
-                <div class="phone vertical">
-                    <img class="shadow" src="assets/shadow.png">
-                    <img class="container" src="assets/phone.png">
-                    <div class="screen-background"></div> 
-                </div>
-                <div class="phone horizontal">
-                    <img class="shadow" src="assets/shadow.png">
-                    <img class="container" src="assets/phone.png">
-                    <div class="screen-background"></div> 
+                <div class="slider__wrapper">
+                    <div class="slider__wrapper-item n1">
+                        <div class="phone vertical">
+                            <img class="shadow" src="assets/shadow.png">
+                            <img class="container" src="assets/phone.png">
+                            <div class="screen-background"></div> 
+                        </div>
+                        <div class="phone horizontal">
+                            <img class="shadow" src="assets/shadow.png">
+                            <img class="container" src="assets/phone.png">
+                            <div class="screen-background"></div> 
+                        </div>
+                    </div>
+                    <div class="slider__wrapper-item n2">
+                        <div class="slide2">
+                            <div onclick="this.style.opacity = (this.style.opacity==1)?0:1" class="blacksquad"></div>
+                        </div>
                 </div>
             </div>
-            <button href="#" class="slider__right-button"></button>
+            
         </section>
         <section class="services">
             <h1 class="services__title">Our Services</h1>
@@ -81,10 +91,10 @@
             </span>
             <nav class="portfolio__nav">
                 <ul>
-                    <li>All</li>
-                    <li>Web Design</li>
-                    <li>Graphic Design</li>
-                    <li>Artwork</li>
+                    <li onclick="singolo.shuffle(0,event)" class="act">All</li>
+                    <li onclick="singolo.shuffle(1,event)">Web Design</li>
+                    <li onclick="singolo.shuffle(2,event)">Graphic Design</li>
+                    <li onclick="singolo.shuffle(3,event)">Artwork</li>
                 </ul>
             </nav>
             <div class="portfolio__images-container">
@@ -152,11 +162,11 @@
         <section class="quote">
             <h1 class="quote__title">Get a Quote</h1>
             <span class="quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span>
-            <form onsubmit="event.preventDefault()" action="quote" class="quote__form">
+            <form onsubmit="singolo.submit(this,event)" action="quote" class="quote__form">
                 <input class="form-area form-line" placeholder="Name (Required)" type="text" required name="name">
                 <input class="form-area form-line" placeholder="Email (Required)" type="email" required name="email">
                 <input class="form-area form-line" placeholder="Subject" type="text" name="subject">
-                <textarea class="form-area" placeholder="Describe your project in detail..." name="decribe"></textarea>
+                <textarea class="form-area" placeholder="Describe your project in detail..." id="decribe" name="decribe"></textarea>
                 <input class="form-area" type="submit" value="OK"></input>
             </form>
             <div class="quote__contact">
