@@ -126,25 +126,11 @@ window.onload = () => {
                     v.classList.remove('act')
                 })
                 e.target.classList.add('act')
-            
-                switch (k){
-                    case 0: document.querySelector('[src="assets/12.jpg"]').style.order = "unset"
-                            document.querySelector('[src="assets/11.jpg"]').style.order = "unset"
-                            document.querySelector('[src="assets/10.jpg"]').style.order = "unset"
-                            break
-                    case 1: document.querySelector('[src="assets/12.jpg"]').style.order = "-1"
-                            document.querySelector('[src="assets/11.jpg"]').style.order = "unset"
-                            document.querySelector('[src="assets/10.jpg"]').style.order = "unset"
-                            break
-                    case 2: document.querySelector('[src="assets/12.jpg"]').style.order = "-1"
-                            document.querySelector('[src="assets/11.jpg"]').style.order = "-2"
-                            document.querySelector('[src="assets/10.jpg"]').style.order = "unset"
-                            break
-                    case 3: document.querySelector('[src="assets/12.jpg"]').style.order = "-1"
-                            document.querySelector('[src="assets/11.jpg"]').style.order = "-2"
-                            document.querySelector('[src="assets/10.jpg"]').style.order = "-3"
-                            break
+                let el = document.querySelector('.portfolio__images-container');
+                for (var i = el.children.length; i >= 0; i--) {
+                    el.appendChild(el.children[Math.random() * i | 0]);
                 }
+                
             }  
             //quote
             const submit = (form, e) =>{
