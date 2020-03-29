@@ -175,6 +175,10 @@ window.onload = () => {
                 document.body.append(elem)
                 return false
             }
-            return {click:click,shuffle:shuffle,submit:submit}
+            function toggle(e) {
+                e.target.parentNode.classList.toggle("active");
+                e.target.classList.toggle("actiove");
+              }
+            return {toggle:toggle,click:click,shuffle:shuffle,submit:submit}
     })()
 }
