@@ -159,8 +159,8 @@
         height: 100%;
     }
     .portfolio__images-container{
-        grid-template-columns: 151px 151px;
-        grid-template-rows: 128px 128px 128px 128px;
+        grid-template-columns: 45vw 45vw;
+        grid-template-rows: 38vw 38vw 38vw 38vw;
         grid-row-gap: 10px;
         grid-column-gap: 10px;
         width: unset; 
@@ -186,6 +186,7 @@
     }
     .people__person{
         width: 100%;
+        height: auto;
     }
     .about-us__text,
     .quote__text{
