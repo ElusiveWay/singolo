@@ -79,10 +79,10 @@
         justify-content: center;
     }
     .portfolio{
-        height: 1094px;
+        height: auto;
     }
     .about-us{
-        height: 700px;
+        height: auto;
     }
     .portfolio__images-container{
         grid-template-columns: 28vw 28vw 28vw;
